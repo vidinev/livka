@@ -1,0 +1,21 @@
+@import "../../../assets/scss/variables";
+
+$opacity: 90;
+
+$transparentize: (100 - $opacity) / 100;
+
+.top-bar {
+  display: block;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background: linear-gradient(to right,
+    transparentize($pink-orange, $transparentize) 0%,
+    transparentize($violet,$transparentize) 100%);
+  z-index: 50;
+  box-shadow: 5px 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.top-navbar {
+  min-height: 70px;
+}
