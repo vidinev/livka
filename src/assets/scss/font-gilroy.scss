@@ -1,0 +1,31 @@
+$font-path: "~assets/fonts/gilroy/";
+
+@font-face {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Gilroy-Regular"),
+  url($font-path + "33F50F_1_0.woff2") format("woff2"),
+  url($font-path + "33F50F_1_0.woff") format("woff"),
+  url($font-path + "33F50F_1_0.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Gilroy-Medium"),
+  url($font-path + "33F50F_2_0.woff2") format("woff2"),
+  url($font-path + "33F50F_2_0.woff") format("woff"),
+  url($font-path + "33F50F_2_0.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 600;
+  src: local("Gilroy-SemiBold"),
+  url($font-path + "33F50F_0_0.woff2") format("woff2"),
+  url($font-path + "33F50F_0_0.woff") format("woff"),
+  url($font-path + "33F50F_0_0.ttf") format("truetype");
+}

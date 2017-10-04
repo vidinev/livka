@@ -1,4 +1,6 @@
 @import "assets/scss/variables";
+@import "assets/scss/buttons";
+@import "assets/scss/font-gilroy";
 
 html, body {
   height: 100%;
@@ -25,6 +27,8 @@ body {
   display: table;
   background-color: $bg-color;
   padding-top: $header-height;
+  font-size: 14px;
+  font-family: "Gilroy", sans-serif;
 }
 
 
