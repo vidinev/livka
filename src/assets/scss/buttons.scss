@@ -42,27 +42,3 @@
     }
   }
 }
-
-.waves-effect {
-  position: relative;
-  cursor: pointer;
-  display: inline-block;
-  overflow: hidden;
-  user-select: none;
-  vertical-align: middle;
-  z-index: 1;
-  will-change: opacity, transform;
-  transition: all 0.1s ease-out;
-  .waves-ripple {
-    position: absolute;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    margin-top: -10px;
-    margin-left: -10px;
-    opacity: 0;
-    background: rgba(0, 0, 0, 0.2);
-    transition: all 0.7s ease-out;
-    transition-property: transform, opacity, -webkit-transform;
-  }
-}

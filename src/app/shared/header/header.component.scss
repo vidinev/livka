@@ -3,6 +3,32 @@
 $opacity: 90;
 
 $transparentize: (100 - $opacity) / 100;
+$icon-size: 38px;
+
+@mixin transition {
+  transition: all 0.25s ease-in-out;
+}
+
+@mixin background($url) {
+  background: darken($violet, 15) url($url) no-repeat 50%/65%;
+  @include transition;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  img {
+    width: 50px;
+  }
+  h1 {
+    text-transform: uppercase;
+    font-size: 3em;
+    margin: 0 0 0 15px;
+    font-weight: 600;
+    color: #2f3239;
+    font-family: 'Finger Paint', cursive;
+  }
+}
 
 .top-bar {
   width: 100%;
@@ -10,22 +36,16 @@ $transparentize: (100 - $opacity) / 100;
   top: 0;
   background: linear-gradient(to right,
     transparentize($pink-orange, $transparentize) 0%,
-    transparentize($violet,$transparentize) 100%);
+    transparentize($violet, $transparentize) 100%);
   z-index: 50;
   box-shadow: 5px 0 10px rgba(0, 0, 0, 0.4);
 }
 
 .top-navbar {
   display: flex;
-  align-items: stretch;
+  align-items: center;
   min-height: 70px;
   padding: 0 30px;
-}
-
-.navbar-collapse {
-  display: flex;
-  align-items: center;
-  flex: 1;
 }
 
 .right-panel {
@@ -33,23 +53,45 @@ $transparentize: (100 - $opacity) / 100;
 }
 
 .icon-nav {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
   cursor: pointer;
-  font-size: 2em;
-  color: rgba(180, 200, 255, 0.8);
-  width: 75px;
-  line-height: 0.65;
-  text-align: center;
-  transition: color 0.2s ease;
+  color: lighten($violet, 25);
+  width: 60px;
   font-weight: 600;
+  @include transition;
   &:hover {
-    color: rgba(180, 200, 255, 1);
+    color: lighten($violet, 18);
+    .icon-round {
+      background-color: darken($violet, 21);
+    }
   }
   .icon-text {
-    font-size: 0.7rem;
+    position: relative;
+    top: 4px;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+  }
+  &.active {
+    .icon-round {
+      box-shadow: inset 0 0 4px 2px rgba(0, 0, 0, 0.08);
+    }
   }
 }
 
-.lnr-enter {
-  margin-left: -5px;
+.icon-round {
+  display: inline-block;
+  width: $icon-size;
+  height: $icon-size;
+  border-radius: $icon-size;
+}
+
+.icon-registration {
+  @include background('https://image.flaticon.com/icons/svg/563/563734.svg');
+}
+
+.icon-login {
+  @include background('https://image.flaticon.com/icons/svg/564/564614.svg');
 }
