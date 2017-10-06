@@ -9,11 +9,6 @@ $icon-size: 38px;
   transition: all 0.25s ease-in-out;
 }
 
-@mixin background($url) {
-  background: darken($violet, 15) url($url) no-repeat 50%/65%;
-  @include transition;
-}
-
 .navbar-brand {
   display: flex;
   align-items: center;
@@ -62,6 +57,10 @@ $icon-size: 38px;
   width: 60px;
   font-weight: 600;
   @include transition;
+  .icon-round {
+    background-color: darken($violet, 15);
+    transition: background-color 0.2s ease-in-out;
+  }
   &:hover {
     color: lighten($violet, 18);
     .icon-round {
@@ -86,12 +85,6 @@ $icon-size: 38px;
   width: $icon-size;
   height: $icon-size;
   border-radius: $icon-size;
-}
-
-.icon-registration {
-  @include background('https://image.flaticon.com/icons/svg/563/563734.svg');
-}
-
-.icon-login {
-  @include background('https://image.flaticon.com/icons/svg/564/564614.svg');
+  background-position: 50%;
+  background-size: 65%;
 }

@@ -5,7 +5,6 @@ import { Component } from '@angular/core';
  * Add translation module
  * SSR + AOT
  * Redux
- * Create icons image sprite
  * */
 
 @Component({
