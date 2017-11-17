@@ -9,6 +9,18 @@ interface ControlMessagesBind {
   name: string
 }
 
+function getConfig(validatorValue) {
+  return {
+    required: 'Please fill in this field',
+    url: 'Please enter a valid URL',
+    email: 'Please enter a valid Email',
+    minlength: `Minimum length ${validatorValue.requiredLength}`,
+    maxlength: `Maximum length ${validatorValue.requiredLength}`,
+    min: `Minimum value must be greater or equal ${validatorValue}`,
+    max: `Maximum value mast be less ${validatorValue}`
+  };
+}
+
 @Component({
   selector: 'vk-control-messages',
   templateUrl: './control-messages.component.html',
@@ -40,16 +52,7 @@ export class ControlMessagesComponent implements OnInit {
 
   private getValidatorErrorMessage(propertyName: string) {
     let validatorValue = this.control.errors[propertyName];
-    const config = {
-      required: 'Please fill in this field',
-      url: 'Please enter a valid URL',
-      email: 'Please enter a valid Email',
-      minlength: `Minimum length ${validatorValue.requiredLength}`,
-      maxlength: `Maximum length ${validatorValue.requiredLength}`,
-      min: `Minimum value must be greater or equal ${validatorValue}`,
-      max: `Maximum value mast be less ${validatorValue}`
-    };
-    return this.messages[propertyName] || config[propertyName];
+    return this.messages[propertyName] || getConfig(validatorValue)[propertyName];
   }
 
   private getErrorMessage() {
