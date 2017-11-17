@@ -1,0 +1,8 @@
+<form [formGroup]="form">
+  <label for="registration-email-control"></label>
+  <input formControlName="email"
+         id="registration-email-control">
+  <vk-control-messages [bind]="{form: form, name: 'email'}"></vk-control-messages>
+
+  <button (click)="submit()">Submit</button>
+</form>

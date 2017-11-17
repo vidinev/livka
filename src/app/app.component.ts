@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
 
 /**
+ * Update to angular 5
+ * Reactive forms - move to common chunk
  * Remove CDN icons make icon font
  * Add translation module
  * SSR + AOT
  * Redux
+ * Review project and plan refactoring
+ * Change logo and text to svg
  * */
 
 @Component({
@@ -13,5 +17,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title: string = 'vk';
 }

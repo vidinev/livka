@@ -1,7 +1,7 @@
 <header class="top-bar">
   <nav class="navbar top-navbar navbar-expand-md navbar-light">
     <div class="navbar-header">
-      <a class="navbar-brand">
+      <a class="navbar-brand" [routerLink]="['/']">
         <img src="../../../assets/logo.png">
         <h1>Losh</h1>
       </a>
@@ -11,7 +11,7 @@
         <div class="icon-round icon-login"></div>
         <span class="icon-text">Вход</span>
       </a>
-      <a class="icon-nav">
+      <a class="icon-nav" [routerLink]="['/join']">
         <div class="icon-round icon-registration"></div>
         <span class="icon-text">Регистрация</span>
       </a>
