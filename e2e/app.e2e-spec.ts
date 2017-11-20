@@ -1,14 +1,13 @@
 import { AppPage } from './app.po';
 
-describe('livka App', () => {
-  let page: AppPage;
+describe('App', () => {
+  AppPage.navigateTo();
 
   beforeEach(() => {
-    page = new AppPage();
   });
 
-  it('should display welcome message', () => {
-    page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to vk!');
+  it('Header should exist on the page', async () => {
+    let header = AppPage.getHeader();
+    expect(header.isPresent()).toBeTruthy();
   });
 });

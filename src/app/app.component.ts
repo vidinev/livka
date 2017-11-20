@@ -8,7 +8,6 @@ import { Component } from '@angular/core';
  * SSR + AOT
  * Redux
  * Review project and plan refactoring
- * Change logo and text to svg
  * */
 
 @Component({

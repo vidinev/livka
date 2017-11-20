@@ -1,11 +1,13 @@
-import { browser, by, element } from 'protractor';
+import { browser } from 'protractor';
+import { HeaderPage } from './shared/header/header.po';
 
 export class AppPage {
-  navigateTo() {
+
+  static navigateTo() {
     return browser.get('/');
   }
 
-  getParagraphText() {
-    return element(by.css('vk-root h1')).getText();
+  static getHeader() {
+    return HeaderPage.getElement();
   }
 }
