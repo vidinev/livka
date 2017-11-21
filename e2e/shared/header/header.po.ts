@@ -11,6 +11,10 @@ export class HeaderPage {
     return browser.get('/');
   }
 
+  static getLogoWrapper() {
+    return element(by.css(`${header} .navbar-brand`));
+  }
+
   static getLogoImage() {
     return element(by.css(`${header} .navbar-brand img`));
   }
